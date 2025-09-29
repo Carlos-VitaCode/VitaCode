@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actividades Interactivas - Biología 9°</title>
+  <style>
+    :root {
+      --verde-suave: #dee8ce;
+      --terracota: #bb6653;
+      --naranja: #f08b51;
+      --crema: #fff8e8;
+      --melocoton: #ffb38e;
+      --arena: #ffcf9d;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      margin: 0;
+      background: var(--crema);
+      line-height: 1.7;
+      color: #333;
+    }
+    nav {
+      background: var(--terracota);
+      padding: 12px;
+      text-align: center;
+    }
+    nav a { color: white; font-weight: 600; text-decoration: none; }
+    h1 {
+      text-align: center;
+      padding: 30px 10px;
+      background: linear-gradient(135deg, var(--verde-suave), var(--terracota));
+      color: white;
+      margin: 0 0 30px 0;
+      font-size: 2.3em;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+    section {
+      background: white;
+      padding: 25px;
+      margin: 25px auto;
+      border-radius: 12px;
+      max-width: 900px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    h2 { color: var(--terracota); }
+    .resultado { font-weight: bold; margin-top: 8px; }
+    button, input {
+      margin: 6px 0;
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    button { background: var(--arena); }
+    button:hover { background: var(--melocoton); }
+    .drag-container {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    .draggable {
+      padding: 10px 15px;
+      background: var(--arena);
+      border-radius: 8px;
+      cursor: grab;
+      user-select: none;
+    }
+    .dropzone {
+      min-height: 40px;
+      border: 2px dashed var(--naranja);
+      padding: 8px;
+      border-radius: 8px;
+      flex: 1;
+    }
+    .match-grid {
+      display: flex;
+      gap: 20px;
+      margin-top: 10px;
+    }
+    .col { flex: 1; }
+    .item { background: var(--arena); padding: 6px; border-radius: 6px; margin: 5px 0; }
+    footer {
+      background: linear-gradient(135deg, var(--terracota), var(--naranja));
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 0.9em;
+    }
+    input[type="text"] {
+  border: 2px solid var(--naranja);
+  border-radius: 6px;
+  padding: 6px 10px;
+  background: var(--melocoton);  /* Fondo melocotón */
+  font-weight: bold;
+  outline: none;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: var(--terracota);
+  background: var(--arena);  /* Cambia a arena cuando escribes */
+  box-shadow: 0 0 8px var(--terracota);
+}
+  </style>
+</head>
+<body>
+  <nav><a href="index.html">← Volver al resumen</a></nav>
+  <h1>Actividades Interactivas</h1>
+
+  <section>
+    <h2>Vitaminas</h2>
+
+    <!-- Pregunta 1: opción múltiple -->
+    <div class="pregunta">
+    <p><strong>1. ¿Cuál de estas NO es una vitamina hidrosoluble?</strong></p>
+    <button onclick="responder(this,false)">A) Vitamina C</button>
+    <button onclick="responder(this,false)">B) Complejo B</button>
+    <button onclick="responder(this,true)">C) Vitamina E</button>
+    <p class="resultado"></p>
+  </div>
+
+    <!-- Pregunta 2: Verdadero/Falso -->
+     <div class="pregunta">
+    <p><strong>2. Verdadero o falso: La vitamina D puede obtenerse con la exposición al sol.</strong></p>
+    <button onclick="responder(this,true)">Verdadero</button>
+    <button onclick="responder(this,false)">Falso</button>
+    <p class="resultado"></p>
+</div>
+ <div class="pregunta">
+  <p><strong>3. Completa: La deficiencia de vitamina</strong> 
+  <input type="text" id="q3" size="2" placeholder="..."> 
+  <strong>causa escorbuto.</strong>
+</p>
+<button onclick="checkInput('q3','C',this)">Comprobar</button>
+<p class="resultado"></p>
+</div>
+<!-- Pregunta 4: Emparejar con líneas -->
+   <div class="pregunta">
+  <p><strong>4. Arrastra una línea desde cada vitamina (izquierda) hasta su función (derecha):</strong></p>
+
+  <div id="match-container">
+    <div class="col left">
+      <div class="match-item" data-match="vision">Vitamina A</div>
+      <div class="match-item" data-match="coagulacion">Vitamina K</div>
+      <div class="match-item" data-match="calcio">Vitamina D</div>
+    </div>
+    <!-- SVG para dibujar líneas -->
+    <svg id="line-canvas"></svg>
+
+    <div class="col right">
+      <div class="match-item" data-match="calcio">Absorción de calcio</div>
+      <div class="match-item" data-match="vision">Visión</div>
+      <div class="match-item" data-match="coagulacion">Coagulación</div>
+    </div>
+  </div>
+
+  <p id="resultado-match" class="resultado"></p>
+
+<style>
+  #match-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    max-width: 700px;
+    margin: 20px auto;
+  }
+  .col {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    z-index: 2;
+  }
+  .left { margin-right: 80px; }
+  .right { margin-left: 80px; }
+  .match-item {
+    background: var(--arena);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  #line-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  line {
+    stroke: var(--terracota);
+    stroke-width: 3;
+  }
+</style>
+
+<script>
+  const svg = document.getElementById("line-canvas");
+  const itemsLeft = document.querySelectorAll(".left .match-item");
+  const itemsRight = document.querySelectorAll(".right .match-item");
+  let startElement = null;
+  let tempLine = null;
+
+  function getCenter(el) {
+    const rect = el.getBoundingClientRect();
+    const containerRect = svg.getBoundingClientRect();
+    return {
+      x: rect.left + rect.width / 2 - containerRect.left,
+      y: rect.top + rect.height / 2 - containerRect.top
+    };
+  }
+
+  itemsLeft.forEach(item => {
+    item.addEventListener("mousedown", e => {
+      startElement = item;
+      const start = getCenter(item);
+
+      tempLine = document.createElementNS("http://www.w3.org/2000/svg", "line");
+      tempLine.setAttribute("x1", start.x);
+      tempLine.setAttribute("y1", start.y);
+      tempLine.setAttribute("x2", start.x);
+      tempLine.setAttribute("y2", start.y);
+      tempLine.setAttribute("stroke", "#888");
+      tempLine.setAttribute("stroke-dasharray", "5,5");
+      svg.appendChild(tempLine);
+
+      function onMouseMove(ev) {
+        const rect = svg.getBoundingClientRect();
+        tempLine.setAttribute("x2", ev.clientX - rect.left);
+        tempLine.setAttribute("y2", ev.clientY - rect.top);
+      }
+
+      function onMouseUp(ev) {
+        document.removeEventListener("mousemove", onMouseMove);
+        document.removeEventListener("mouseup", onMouseUp);
+
+        const target = document.elementFromPoint(ev.clientX, ev.clientY);
+        if (target && target.classList.contains("match-item") && target.parentElement.classList.contains("right")) {
+          if (target.dataset.match === startElement.dataset.match) {
+            // Línea correcta
+            tempLine.setAttribute("stroke", "green");
+            tempLine.setAttribute("stroke-dasharray", "0");
+            document.getElementById("resultado-match").textContent = "✅ ¡Correcto!";
+            document.getElementById("resultado-match").style.color = "green";
+            startElement.style.background = "#90ee90";
+            target.style.background = "#90ee90";
+          } else {
+            // Línea incorrecta
+            tempLine.setAttribute("stroke", "red");
+            setTimeout(() => tempLine.remove(), 1000);
+            document.getElementById("resultado-match").textContent = "❌ Incorrecto, intenta otra vez.";
+            document.getElementById("resultado-match").style.color = "red";
+          }
+        } else {
+          tempLine.remove();
+        }
+        startElement = null;
+        tempLine = null;
+      }
+
+      document.addEventListener("mousemove", onMouseMove);
+      document.addEventListener("mouseup", onMouseUp);
+    });
+  });
+</script>
+    <!-- Pregunta 5: opción múltiple -->
+     <div class="pregunta">
+    <p><strong>5. ¿Cuál es la función principal de la vitamina E?</strong></p>
+    <button onclick="responder(this,true)">A) Antioxidante</button>
+    <button onclick="responder(this,false)">B) Producción de glóbulos rojos</button>
+    <button onclick="responder(this,false)">C) Absorción de hierro</button>
+    <p class="resultado"></p>
+</div>
+ <div class="pregunta">
+<p><strong>6. Nombra una fuente natural de vitamina B12:</strong></p>
+<input type="text" id="q6" placeholder="Ej: carne, huevo...">
+<button onclick="checkIncludes('q6',['carne','huevo','pescado','lácteo'],this)">Comprobar</button>
+<p class="resultado"></p>
+</div>
+  <section>
+    <h2>ADN</h2>
+    <!-- Pregunta 7: Ordenar -->
+ <div class="pregunta">
+<p><strong>7. Ordena el proceso: ADN → ARN → Proteína</strong></p>
+<ul id="sortable" class="sortable">
+  <li draggable="true">Proteína</li>
+  <li draggable="true">ADN</li>
+  <li draggable="true">ARN</li>
+</ul>
+<button onclick="checkOrder()">Comprobar</button>
+<p id="resultado-orden" class="resultado"></p>
+
+<style>
+  .sortable {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    gap: 15px;
+  }
+  .sortable li {
+    padding: 10px 15px;
+    background: var(--arena);
+    border-radius: 8px;
+    cursor: grab;
+    user-select: none;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+  .sortable li.dragging {
+    opacity: 0.5;
+  }
+</style>
+
+<script>
+  const sortable = document.getElementById("sortable");
+
+  let draggedItem = null;
+
+  sortable.addEventListener("dragstart", e => {
+    draggedItem = e.target;
+    e.target.classList.add("dragging");
+  });
+
+  sortable.addEventListener("dragend", e => {
+    e.target.classList.remove("dragging");
+    draggedItem = null;
+  });
+
+  sortable.addEventListener("dragover", e => {
+    e.preventDefault();
+    const afterElement = getDragAfterElement(sortable, e.clientX);
+    if (afterElement == null) {
+      sortable.appendChild(draggedItem);
+    } else {
+      sortable.insertBefore(draggedItem, afterElement);
+    }
+  });
+
+  function getDragAfterElement(container, x) {
+    const draggableElements = [...container.querySelectorAll("li:not(.dragging)")];
+    return draggableElements.reduce((closest, child) => {
+      const box = child.getBoundingClientRect();
+      const offset = x - box.left - box.width / 2;
+      if (offset < 0 && offset > closest.offset) {
+        return { offset: offset, element: child };
+      } else {
+        return closest;
+      }
+    }, { offset: Number.NEGATIVE_INFINITY }).element;
+  }
+
+  function checkOrder() {
+    const items = [...sortable.querySelectorAll("li")].map(el => el.textContent.trim());
+    const correcto = ["ADN", "ARN", "Proteína"];
+    if (JSON.stringify(items) === JSON.stringify(correcto)) {
+      document.getElementById("resultado-orden").textContent = "✅ ¡Correcto! ADN → ARN → Proteína";
+      document.getElementById("resultado-orden").style.color = "green";
+    } else {
+      document.getElementById("resultado-orden").textContent = "❌ Incorrecto, vuelve a intentarlo.";
+      document.getElementById("resultado-orden").style.color = "red";
+    }
+  }
+</script>
+    <!-- Pregunta 8: verdadero/falso -->
+     <div class="pregunta">
+    <p><strong>8. Verdadero o falso: Las bases del ADN se aparean siempre A–T y C–G.</strong></p>
+    <button onclick="responder(this,true)">Verdadero</button>
+    <button onclick="responder(this,false)">Falso</button>
+    <p class="resultado"></p>
+  </section>
+</div>
+  <section>
+    <h2>ARN</h2>
+    <!-- Pregunta 9: opción múltiple -->
+   <div class="pregunta">
+    <p><strong>9. ¿Qué tipo de ARN lleva aminoácidos al ribosoma?</strong></p>
+    <button onclick="responder(this,true)">ARNt</button>
+    <button onclick="responder(this,false)">ARNm</button>
+    <button onclick="responder(this,false)">ARNr</button>
+    <p class="resultado"></p>
+</div>
+ <div class="pregunta">
+<p><strong>10. Completa: En el ARN la timina (T) es reemplazada por</strong> 
+  <input type="text" id="q10" size="8" placeholder="Escribe aquí">.
+</p>
+<button onclick="checkInput('q10','Uracilo',this)">Comprobar</button>
+<p class="resultado"></p>
+  </section>
+</div>
+  <footer>
+    <p>Proyecto escolar - Biología 9° Grado | Actividades interactivas</p>
+  </footer>
+<script>
+  function responder(btn, correcto) {
+    const contenedor = btn.closest('.pregunta');
+    const resultado = contenedor.querySelector('.resultado');
+    if (correcto) {
+      resultado.textContent = "✅ ¡Correcto!";
+      resultado.style.color = "green";
+    } else {
+      resultado.textContent = "❌ Incorrecto.";
+      resultado.style.color = "red";
+    }
+  }
+
+  function checkInput(id, respuesta, btn) {
+    const input = document.getElementById(id).value.trim().toLowerCase();
+    const contenedor = btn.closest('.pregunta');
+    const resultado = contenedor.querySelector('.resultado');
+    if (input === respuesta.toLowerCase()) {
+      resultado.textContent = "✅ ¡Correcto!";
+      resultado.style.color = "green";
+    } else {
+      resultado.textContent = "❌ Incorrecto.";
+      resultado.style.color = "red";
+    }
+  }
+
+  function checkIncludes(id, posibles, btn) {
+    const input = document.getElementById(id).value.trim().toLowerCase();
+    const contenedor = btn.closest('.pregunta');
+    const resultado = contenedor.querySelector('.resultado');
+    if (posibles.some(p => input.includes(p))) {
+      resultado.textContent = "✅ ¡Correcto!";
+      resultado.style.color = "green";
+    } else {
+      resultado.textContent = "❌ Intenta con un alimento de origen animal.";
+      resultado.style.color = "red";
+    }
+  }
+</script>
+  </script>
+</body>
+</html>

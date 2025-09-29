@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Importancia de las vitaminas en la salud - Biología 9°</title>
+  <meta name="description" content="La importancia de las vitaminas en la salud: beneficios, prevención de enfermedades, mitos y consejos prácticos para estudiantes de 9° grado." />
+  <style>
+    :root {
+      --verde-suave: #dee8ce;
+      --terracota: #bb6653;
+      --naranja: #f08b51;
+      --crema: #fff8e8;
+      --melocoton: #ffb38e;
+      --arena: #ffcf9d;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      margin: 0;
+      background: var(--crema);
+      line-height: 1.7;
+      color: #333;
+    }
+
+    nav.top {
+      background: var(--terracota);
+      padding: 12px;
+      text-align: center;
+    }
+    nav.top a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      border-bottom: 2px solid transparent;
+    }
+    nav.top a:hover { border-bottom: 2px solid var(--arena); }
+
+    header {
+      background: linear-gradient(135deg, var(--verde-suave), var(--terracota));
+      color: white;
+      text-align: center;
+      padding: 32px 12px 26px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    }
+    header h1 { margin: 0; font-size: 2.4rem; }
+    header p { margin: 8px 0 0; font-size: 1.05rem; opacity: .95; }
+
+    section {
+      background: #fff;
+      margin: 22px auto;
+      padding: 22px;
+      border-radius: 12px;
+      max-width: 920px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    h2 { color: var(--terracota); margin-top: 0; }
+    h3 { color: var(--naranja); margin-top: 1rem; }
+
+    .nota {
+      background: var(--verde-suave);
+      border-left: 6px solid var(--terracota);
+      padding: 12px 16px;
+      border-radius: 10px;
+      margin: 16px 0;
+    }
+
+    ul, ol { padding-left: 20px; }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .card h4 { margin: 0 0 6px; color: var(--naranja); }
+
+    .imagen { text-align: center; margin: 16px 0; }
+    img {
+      max-width: 360px;
+      border-radius: 10px;
+      border: 4px solid var(--melocoton);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform .3s ease;
+    }
+    img:hover { transform: scale(1.05); }
+
+    .chips {
+      display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;
+      margin-top: 12px;
+    }
+    .chip {
+      background: var(--arena);
+      color: #333;
+      padding: 8px 12px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      border: 2px solid transparent;
+    }
+    .chip:hover { border-color: var(--naranja); }
+
+    footer {
+      background: linear-gradient(135deg, var(--terracota), var(--naranja));
+      color: #fff;
+      text-align: center;
+      padding: 15px; margin-top: 40px; font-size: .9rem;
+    }
+
+    @media (max-width: 720px) {
+      .grid-3 { grid-template-columns: 1fr; }
+      img { max-width: 90%; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="top">
+    <a href="vitaminas.html">← Volver a Vitaminas</a>
+    &nbsp;|&nbsp;
+    <a href="index.html">Inicio</a>
+  </nav>
+
+  <header>
+    <h1>Importancia de las vitaminas en la salud</h1>
+    <p>Cómo influyen en tu bienestar y calidad de vida</p>
+
+    <div class="chips" aria-label="Índice de secciones">
+      <a class="chip" href="#beneficios">Beneficios clave</a>
+      <a class="chip" href="#prevencion">Prevención de enfermedades</a>
+      <a class="chip" href="#mitos">Mitos y realidades</a>
+      <a class="chip" href="#consejos">Consejos prácticos</a>
+    </div>
+  </header>
+
+  <section id="beneficios">
+    <h2>Beneficios clave</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h4>💪 Energía y vitalidad</h4>
+        <p>Vitaminas del complejo B permiten que el cuerpo transforme alimentos en energía diaria.</p>
+      </div>
+      <div class="card">
+        <h4>🛡️ Defensa</h4>
+        <p>La vitamina C refuerza el sistema inmune, reduciendo riesgos de infecciones.</p>
+      </div>
+      <div class="card">
+        <h4>🧠 Mente activa</h4>
+        <p>Vitaminas como B12 y ácido fólico son claves en la memoria, concentración y estado de ánimo.</p>
+      </div>
+    </div>
+    <div class="imagen">
+      <img src="img/vit_importancia_beneficios.jpg" alt="Alimentos saludables para energía, defensas y mente activa" />
+    </div>
+  </section>
+
+  <section id="prevencion">
+    <h2>Prevención de enfermedades</h2>
+    <ul>
+      <li><strong>Vitamina D:</strong> previene raquitismo y reduce riesgo de osteoporosis.</li>
+      <li><strong>Vitamina A:</strong> previene la ceguera nocturna y fortalece la piel.</li>
+      <li><strong>Vitamina C:</strong> previene el escorbuto y acelera la cicatrización.</li>
+      <li><strong>Complejo B:</strong> previene anemia y problemas neurológicos.</li>
+    </ul>
+    <div class="nota">Un déficit o exceso de vitaminas puede alterar procesos vitales. El equilibrio es la clave.</div>
+  </section>
+
+  <section id="mitos">
+    <h2>Mitos y realidades</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h4>Mito ❌</h4>
+        <p>“Mientras más vitaminas, mejor salud.”</p>
+        <h4>Realidad ✅</h4>
+        <p>El exceso de vitaminas liposolubles puede ser tóxico.</p>
+      </div>
+      <div class="card">
+        <h4>Mito ❌</h4>
+        <p>“Las vitaminas sustituyen una buena alimentación.”</p>
+        <h4>Realidad ✅</h4>
+        <p>Son un complemento, nunca reemplazan alimentos frescos.</p>
+      </div>
+      <div class="card">
+        <h4>Mito ❌</h4>
+        <p>“Solo necesito vitamina C para no enfermarme.”</p>
+        <h4>Realidad ✅</h4>
+        <p>El sistema inmune requiere el equilibrio de varias vitaminas y nutrientes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="consejos">
+    <h2>Consejos prácticos para tu día a día</h2>
+    <ol>
+      <li>Incluye frutas y verduras de colores variados en tus comidas.</li>
+      <li>Consume lácteos, carnes magras o legumbres para vitaminas del complejo B.</li>
+      <li>Toma sol de forma responsable unos minutos al día para vitamina D.</li>
+      <li>Evita el abuso de suplementos sin supervisión médica.</li>
+      <li>Prefiere alimentos frescos a ultraprocesados.</li>
+    </ol>
+    <div class="imagen">
+      <img src="img/vit_importancia_consejos.jpg" alt="Plato equilibrado con frutas, verduras y proteínas" />
+    </div>
+  </section>
+
+  <section style="text-align:center">
+    <a class="chip" href="vitaminas-clasificacion.html">← Volver a: Clasificación y función</a>
+    <a class="chip" href="vitaminas-que-son.html">← Ir a: ¿Qué son?</a>
+    <a class="chip" href="actividades.html">→ Ir a: Actividades</a>
+  </section>
+
+  <footer>
+    <p>Proyecto escolar - Biología 9° Grado | Créditos: Imágenes libres de derechos</p>
+  </footer>
+</body>
+</html>

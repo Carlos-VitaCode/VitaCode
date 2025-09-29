@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vitaminas, ADN y ARN - Biología 9°</title>
+  <style>
+    /* Paleta: Verde suave, terracota, naranja, crema */
+    :root {
+      --verde-suave: #dee8ce;
+      --terracota: #bb6653;
+      --naranja: #f08b51;
+      --crema: #fff8e8;
+      --melocoton: #ffb38e;
+      --arena: #ffcf9d;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      margin: 0;
+      background: var(--crema);
+      color: #333;
+      line-height: 1.7;
+    }
+.hilos-conductores {
+  background: white; /* fondo blanco */
+  border-left: 6px solid var(--terracota);
+  padding: 25px;
+  margin: 30px auto;
+  max-width: 900px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.hilos-conductores h2 {
+  color: var(--terracota);
+  margin-top: 0;
+  font-size: 1.8em;
+  text-align: center;
+}
+
+.hilos-conductores ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.hilos-conductores li {
+  background: var(--arena);
+  margin-bottom: 12px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  font-weight: 500;
+  position: relative;
+  padding-left: 40px;
+}
+
+.hilos-conductores li::before {
+  content: "🎯";
+  position: absolute;
+  left: 12px;
+  top: 10px;
+  font-size: 1.2em;
+}
+    /* Encabezado */
+    header {
+      background: linear-gradient(135deg, var(--verde-suave), var(--terracota));
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    header p {
+      margin: 10px 0 0;
+      font-size: 1.2em;
+    }
+
+    /* Navegación */
+    nav {
+      background: var(--terracota);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 12px;
+    }
+
+    nav a {
+      color: white;
+      margin: 8px 15px;
+      text-decoration: none;
+      font-weight: 600;
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+      transition: border-bottom 0.3s ease;
+    }
+
+    nav a:hover {
+      border-bottom: 2px solid var(--arena);
+    }
+
+    /* Secciones */
+    section {
+      padding: 25px;
+      background: white;
+      margin: 25px auto;
+      border-radius: 12px;
+      max-width: 900px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      color: var(--terracota);
+    }
+
+    h3 {
+      color: var(--naranja);
+    }
+
+    /* Listas */
+    ul, ol {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    /* Imágenes */
+    .imagen {
+      text-align: center;
+      margin: 15px 0;
+    }
+
+    img {
+      max-width: 320px;
+      border-radius: 10px;
+      border: 4px solid var(--melocoton);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(135deg, var(--terracota), var(--naranja));
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    /* Responsivo */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+      nav {
+        flex-direction: column;
+      }
+      img {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header>
+    <h1>Vitaminas vivas: cómo conservar su poder</h1>
+    <p>Proyecto de Biología - 9° Grado</p>
+  </header>
+
+  <!-- Navegación -->
+  <nav>
+    <a href="vitaminas.html">Vitaminas</a>
+    <a href="adn.html">ADN</a>
+    <a href="arn.html">ARN</a>
+    <a href="actividades.html">Actividades</a>
+  </nav>
+
+  <!-- Secciones -->
+ 
+  <section id="vitaminas">
+    <h2>¿Qué son las Vitaminas?</h2>
+    <p>Las vitaminas son micronutrientes esenciales que nuestro cuerpo necesita en pequeñas cantidades para funcionar correctamente.</p>
+    <h3>Tipos de Vitaminas</h3>
+    <ul>
+      <li><strong>Liposolubles:</strong> A, D, E, K - Se almacenan en la grasa del cuerpo.</li>
+      <li><strong>Hidrosolubles:</strong> C y complejo B - Se disuelven en agua y no se almacenan.</li>
+    </ul>
+    <div class="imagen">
+      <img src="img/vitamina.jpg" alt="Frutas y verduras ricas en vitaminas">
+    </div>
+  </section>
+
+  <section id="adn">
+    <h2>¿Qué es el ADN?</h2>
+    <p>El ADN (Ácido Desoxirribonucleico) es la molécula que contiene la información genética de todos los seres vivos.</p>
+    <div class="imagen">
+      <img src="img/adnmutacion.jpg" alt="Estructura del ADN">
+    </div>
+  </section>
+
+  <section id="arn">
+    <h2>¿Qué es el ARN?</h2>
+    <p>El ARN (Ácido Ribonucleico) es una molécula que copia la información del ADN y participa en la producción de proteínas.</p>
+    <div class="imagen">
+      <img src="img/arn.jpg" alt="Estructura del ARN">
+    </div>
+  </section>
+
+  <section id="actividades">
+    <h2>Actividades Interactivas</h2>
+    <ol>
+      <li>Clasifica cada vitamina como liposoluble o hidrosoluble.</li>
+      <li>Sopa de letras: Busca ADN, ARN, proteína, vitamina.</li>
+      <li>Ordena el proceso: ADN → ARN → Proteína.</li>
+    </ol>
+  </section>
+ <section class="hilos-conductores">
+  <h2>🧠 Hilos Conductores</h2>
+  <ul>
+    <li>¿Qué tipos de vitaminas existen y qué funciones cumplen en el cuerpo humano?</li>
+    <li>¿Cómo afectan factores como la temperatura, el pH y el tiempo a la estructura y función de las vitaminas?</li>
+    <li>¿Cómo analizamos cuantitativamente los cambios en las vitaminas?</li>
+    <li>¿Cómo diseñamos un experimento que permita controlar y medir con precisión las variables?</li>
+    <li>¿Qué decisiones informadas podemos tomar para conservar mejor los nutrientes en nuestros alimentos?</li>
+  </ul>
+</section>
+  <!-- Footer -->
+  <footer>
+    <p>Proyecto escolar - Biología 9° Grado | Imágenes libres de derechos</p>
+  </footer>
+
+</body>
+</html>

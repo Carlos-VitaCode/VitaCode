@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ADN - Biología 9°</title>
+  <style>
+    /* Paleta */
+    :root {
+      --verde-suave: #dee8ce;
+      --terracota: #bb6653;
+      --naranja: #f08b51;
+      --crema: #fff8e8;
+      --melocoton: #ffb38e;
+      --arena: #ffcf9d;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      margin: 0;
+      background: var(--crema);
+      line-height: 1.7;
+      color: #333;
+    }
+
+    /* Nav */
+    nav {
+      background: var(--terracota);
+      padding: 12px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-bottom: 2px solid transparent;
+      transition: border-bottom 0.3s ease;
+    }
+
+    nav a:hover {
+      border-bottom: 2px solid var(--arena);
+    }
+
+    /* Títulos */
+    h1 {
+      text-align: center;
+      padding: 30px 10px;
+      background: linear-gradient(135deg, var(--verde-suave), var(--terracota));
+      color: white;
+      margin: 0 0 30px 0;
+      font-size: 2.3em;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      color: var(--terracota);
+      margin-top: 0;
+    }
+
+    h3 {
+      color: var(--naranja);
+      margin-top: 1em;
+    }
+
+    /* Secciones */
+    section {
+      background: white;
+      padding: 25px;
+      margin: 25px auto;
+      border-radius: 12px;
+      max-width: 900px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    /* Listas y tablas */
+    ul, ol {
+      padding-left: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background: var(--naranja);
+      color: white;
+    }
+
+    /* Imágenes */
+    .imagen {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    img {
+      max-width: 320px;
+      border-radius: 10px;
+      border: 4px solid var(--melocoton);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Nota destacada */
+    .nota {
+      background: var(--verde-suave);
+      border-left: 6px solid var(--terracota);
+      padding: 12px 16px;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(135deg, var(--terracota), var(--naranja));
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 0.9em;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      img {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav><a href="index.html">← Volver al resumen</a></nav>
+
+  <h1>ADN: La molécula de la herencia</h1>
+
+  <section>
+    <h2>¿Qué es el ADN?</h2>
+    <p>El <strong>ácido desoxirribonucleico (ADN)</strong> es la molécula que almacena la información genética de casi todos los seres vivos. Funciona como un "manual" que indica a las células cómo crecer, dividirse y funcionar.</p>
+    <div class="imagen">
+      <img src="img/doblehelice.jpg" alt="Ilustración de la doble hélice del ADN" />
+    </div>
+  </section>
+
+  <section>
+    <h2>Estructura básica</h2>
+    <p>El ADN tiene forma de <strong>doble hélice</strong>, semejante a una escalera retorcida:</p>
+    <ul>
+      <li><strong>Nucleótido:</strong> azúcar + fosfato + base nitrogenada.</li>
+      <li><strong>Bases:</strong> Adenina (A), Timina (T), Citosina (C), Guanina (G).</li>
+      <li><strong>Emparejamiento:</strong> A con T, C con G.</li>
+      <li><strong>Puentes de hidrógeno:</strong> unen las bases de ambas hebras.</li>
+    </ul>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Componente</th>
+          <th>Descripción</th>
+          <th>Función</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Azúcar (desoxirribosa)</td>
+          <td>Parte del esqueleto</td>
+          <td>Soporte estructural</td>
+        </tr>
+        <tr>
+          <td>Grupo fosfato</td>
+          <td>Alterna con el azúcar</td>
+          <td>Estabilidad y carga</td>
+        </tr>
+        <tr>
+          <td>Bases A–T</td>
+          <td>Emparejamiento específico</td>
+          <td>2 puentes de hidrógeno</td>
+        </tr>
+        <tr>
+          <td>Bases C–G</td>
+          <td>Emparejamiento específico</td>
+          <td>3 puentes de hidrógeno</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="nota"><strong>Dato:</strong> El orden de las bases es lo que constituye la información genética.</p>
+  </section>
+
+  <section>
+    <h2>Genes, cromosomas y genoma</h2>
+    <p>Un <strong>gen</strong> es un segmento de ADN que produce una molécula funcional. Estos se organizan en <strong>cromosomas</strong>. En humanos hay 46 (23 pares). El <strong>genoma</strong> es el conjunto total de ADN.</p>
+    <ul>
+      <li><strong>Localización:</strong> mayormente en el núcleo.</li>
+      <li><strong>Variación genética:</strong> explica rasgos como color de ojos o predisposición a enfermedades.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>¿Cómo se copia el ADN? (Replicación)</h2>
+    <p>Antes de que una célula se divida, debe copiar su ADN:</p>
+    <ul>
+      <li><strong>Helicasa:</strong> separa hebras.</li>
+      <li><strong>ADN polimerasa:</strong> agrega nucleótidos y corrige errores.</li>
+      <li><strong>Resultado:</strong> dos moléculas idénticas (replicación semiconservativa).</li>
+    </ul>
+    <div class="imagen">
+      <img src="img/replicacionadn.jpg" alt="Replicación del ADN" />
+    </div>
+  </section>
+
+  <section>
+    <h2>Del ADN a la proteína</h2>
+    <h3>Dogma central</h3>
+    <p>La información fluye del ADN al ARN y luego a proteínas:</p>
+    <ul>
+      <li><strong>Transcripción:</strong> ADN → ARNm.</li>
+      <li><strong>Traducción:</strong> ARNm → proteína.</li>
+      <li><strong>Código genético:</strong> cada codón (3 bases) = 1 aminoácido.</li>
+    </ul>
+    <div class="imagen">
+      <img src="img/dogma.jpg" alt="Transcripción y traducción" />
+    </div>
+  </section>
+
+  <section>
+    <h2>Mutaciones y salud</h2>
+    <p>Una <strong>mutación</strong> es un cambio en la secuencia del ADN. Pueden ser neutras, beneficiosas o dañinas:</p>
+    <ul>
+      <li><strong>Tipos:</strong> sustituciones, inserciones, deleciones.</li>
+      <li><strong>Causas:</strong> errores, radiación, químicos.</li>
+      <li><strong>Ejemplos:</strong> anemia falciforme, fibrosis quística.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Tecnologías basadas en ADN</h2>
+    <ul>
+      <li><strong>PCR:</strong> copia fragmentos de ADN.</li>
+      <li><strong>Secuenciación:</strong> lee el orden de bases.</li>
+      <li><strong>CRISPR:</strong> edición genética precisa.</li>
+      <li><strong>Huella genética:</strong> identificación individual.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Cuidados, bioseguridad y ética</h2>
+    <ul>
+      <li><strong>Privacidad:</strong> proteger datos genéticos.</li>
+      <li><strong>Bioseguridad:</strong> usar técnicas adecuadas.</li>
+      <li><strong>Ética:</strong> considerar el impacto de la edición genética.</li>
+    </ul>
+   <div class="imagen">
+    <img src="img/cromosoma.jpg" alt="Cromosomas al microscopio" />
+  </div>
+
+  </section>
+
+
+  <footer>
+    <p>Proyecto escolar - Biología 9° Grado | Créditos: Imágenes libres de derechos</p>
+  </footer>
+
+</body>
+</html>

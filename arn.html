@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ARN - Biología 9°</title>
+  <style>
+    /* Paleta */
+    :root {
+      --verde-suave: #dee8ce;
+      --terracota: #bb6653;
+      --naranja: #f08b51;
+      --crema: #fff8e8;
+      --melocoton: #ffb38e;
+      --arena: #ffcf9d;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      margin: 0;
+      background: var(--crema);
+      line-height: 1.7;
+      color: #333;
+    }
+
+    /* Nav */
+    nav {
+      background: var(--terracota);
+      padding: 12px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-bottom: 2px solid transparent;
+      transition: border-bottom 0.3s ease;
+    }
+
+    nav a:hover {
+      border-bottom: 2px solid var(--arena);
+    }
+
+    /* Títulos */
+    h1 {
+      text-align: center;
+      padding: 30px 10px;
+      background: linear-gradient(135deg, var(--verde-suave), var(--terracota));
+      color: white;
+      margin: 0 0 30px 0;
+      font-size: 2.3em;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      color: var(--terracota);
+      margin-top: 0;
+    }
+
+    h3 {
+      color: var(--naranja);
+      margin-top: 1em;
+    }
+
+    /* Secciones */
+    section {
+      background: white;
+      padding: 25px;
+      margin: 25px auto;
+      border-radius: 12px;
+      max-width: 900px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    /* Listas y tablas */
+    ul, ol {
+      padding-left: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background: var(--naranja);
+      color: white;
+    }
+
+    /* Imágenes */
+    .imagen {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    img {
+      max-width: 320px;
+      border-radius: 10px;
+      border: 4px solid var(--melocoton);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Nota destacada */
+    .nota {
+      background: var(--verde-suave);
+      border-left: 6px solid var(--terracota);
+      padding: 12px 16px;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(135deg, var(--terracota), var(--naranja));
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 0.9em;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      img {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navegación -->
+  <nav><a href="index.html">← Volver al resumen</a></nav>
+
+  <!-- Título -->
+  <h1>ARN: El mensajero de la información genética</h1>
+
+  <!-- Secciones -->
+  <section>
+    <h2>¿Qué es el ARN?</h2>
+    <p>El <strong>ácido ribonucleico (ARN)</strong> es una molécula relacionada con el ADN, pero con funciones específicas en la transmisión y uso de la información genética. Actúa como <em>mensajero</em> que lleva las instrucciones desde el ADN hasta los ribosomas, donde se fabrican las proteínas; además, algunos tipos de ARN ayudan a ensamblar esos ladrillos (aminoácidos) y otros regulan qué genes se encienden o apagan en cada momento.</p>
+    <p>A diferencia del ADN, que se encuentra sobre todo en el núcleo y sirve como archivo “maestro”, el ARN se encuentra en <strong>núcleo</strong>, <strong>citoplasma</strong> y <strong>ribosomas</strong>. Su vida suele ser más corta que la del ADN, lo que permite a la célula responder rápido a cambios (por ejemplo, fabricar más o menos de una proteína según se necesite).</p>
+    <div class="imagen">
+      <img src="img/arnmensajero.jpg" alt="Estructura de una hebra de ARN" />
+    </div>
+  </section>
+
+  <section>
+    <h2>Estructura básica</h2>
+    <p>Los nucleótidos del ARN están formados por:</p>
+    <ul>
+      <li><strong>Azúcar:</strong> ribosa.</li>
+      <li><strong>Grupo fosfato:</strong> parte del esqueleto de la molécula.</li>
+      <li><strong>Bases nitrogenadas:</strong> adenina (A), uracilo (U), citosina (C) y guanina (G).</li>
+    </ul>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Característica</th>
+          <th>ADN</th>
+          <th>ARN</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Azúcar</td><td>Desoxirribosa</td><td>Ribosa</td></tr>
+        <tr><td>Bases</td><td>A, T, C, G</td><td>A, U, C, G</td></tr>
+        <tr><td>Estructura</td><td>Doble hélice</td><td>Hebra sencilla</td></tr>
+        <tr><td>Función principal</td><td>Almacenar información genética</td><td>Transmitir y traducir la información</td></tr>
+      </tbody>
+    </table>
+
+    <p class="nota"><strong>Dato:</strong> Aunque el ARN suele ser monocatenario, en algunos virus actúa como material genético principal.</p>
+    <p>El ARN se organiza con enlaces <strong>fosfodiéster</strong> que le dan dirección 5’→3’. Aunque es de <em>una sola hebra</em>, puede plegarse sobre sí mismo y formar <em>estructuras secundarias</em> (como horquillas) que son esenciales para su función, especialmente en ARNt y ARNr.</p>
+  </section>
+
+  <section>
+    <h2>Tipos principales de ARN</h2>
+    <ul>
+      <li><strong>ARN mensajero (ARNm):</strong> lleva la información del ADN a los ribosomas. Contiene codones (grupos de 3 bases) que especifican aminoácidos. En eucariotas suele llevar un <em>cap</em> en 5′ y una cola de poli-A en 3′ para protegerlo.</li>
+      <li><strong>ARN de transferencia (ARNt):</strong> transporta aminoácidos al ribosoma. Cada ARNt posee un <em>anticodón</em> complementario al codón del ARNm, asegurando que se incorpore el aminoácido correcto.</li>
+      <li><strong>ARN ribosómico (ARNr):</strong> forma parte estructural y funcional de los ribosomas (la “fábrica” de proteínas). Cataliza la formación del enlace peptídico.</li>
+      <li><strong>ARN no codificante:</strong> regula procesos celulares. Incluye <em>miARN</em> y <em>siARN</em> (silenciamiento génico), <em>lncARN</em> (regulación a largo alcance) y <em>snoARN</em> (modificación de otros ARN).</li>
+    </ul>
+    <div class="imagen">
+      <img src="img/tiposarn.jpg" alt="Esquema de los principales tipos de ARN" />
+    </div>
+  </section>
+
+  <section>
+    <h2>Del ADN al ARN: Transcripción</h2>
+    <p>La transcripción es el proceso en el cual un gen del ADN se copia en una molécula de ARN. Ocurre en tres etapas: <strong>iniciación</strong> (la ARN polimerasa se une al promotor del gen y separa las hebras de ADN), <strong>elongación</strong> (va añadiendo ribonucleótidos complementarios a la hebra molde) y <strong>terminación</strong> (se libera el ARN recién sintetizado).</p>
+    <p>En células eucariotas, el ARN primario (<em>pre-ARNm</em>) sufre <strong>procesamiento</strong>: adición de cap 5′, cola de poli-A en 3′ y <strong>splicing</strong> para eliminar <em>intrones</em> y unir <em>exones</em>. Este ARNm maduro sale del núcleo hacia los ribosomas.</p>
+    <div class="imagen">
+      <img src="img/adnarn.jpg" alt="Esquema de la transcripción de ADN a ARN" />
+    </div>
+  </section>
+
+  <section>
+    <h2>Traducción: del ARN a la proteína</h2>
+    <p>En los ribosomas, el ARNm se lee en grupos de tres bases llamados <strong>codones</strong>. El proceso comienza con el codón de <strong>inicio (AUG)</strong>, que codifica metionina; el ARNt correspondiente se une al ribosoma y, con la ayuda de otros ARNt, se van incorporando aminoácidos en el orden correcto.</p>
+    <p>La traducción progresa por los sitios <strong>A</strong> (entrada), <strong>P</strong> (peptidil) y <strong>E</strong> (salida). Cuando aparece un codón de <strong>terminación</strong> (UAA, UAG o UGA), el proceso se detiene y la proteína se libera para cumplir su función celular.</p>
+    <div class="imagen">
+      <img src="img/codones.jpg" alt="Proceso de traducción del ARNm a proteína" />
+    </div>
+  </section>
+
+  <section>
+    <h2>ARN y virus</h2>
+    <p>Algunos virus, como el de la gripe o el SARS-CoV-2, usan ARN como material genético. En los virus de ARN de <strong>sentido positivo</strong>, su genoma puede actuar directamente como ARNm; en los de <strong>sentido negativo</strong>, primero debe copiarse a una hebra positiva. Los <strong>retrovirus</strong> (como VIH) tienen ARN pero usan una enzima llamada <em>transcriptasa inversa</em> para crear ADN a partir del ARN e integrarlo en el genoma de la célula.</p>
+    <p>Al replicarse con menos correcciones de errores que el ADN, los virus de ARN suelen presentar <strong>mayor variación</strong>, lo que favorece la aparición de variantes.</p>
+  </section>
+
+  <section>
+    <h2>Tecnologías basadas en ARN</h2>
+    <ul>
+      <li><strong>Vacunas de ARNm:</strong> inducen respuesta inmune. Entregan instrucciones temporales para que nuestras células produzcan una proteína del patógeno y así entrenar al sistema inmune.</li>
+      <li><strong>ARN de interferencia (ARNi):</strong> bloquea genes específicos. Los siARN y miARN pueden silenciar la producción de proteínas asociadas a enfermedades.</li>
+      <li><strong>Biología sintética:</strong> diseño de terapias basadas en ARN. Incluye guías de ARN en sistemas de edición genética, biosensores y circuitos reguladores programables.</li>
+    </ul>
+    <p>Además, técnicas de laboratorio como la <strong>RT-PCR</strong> permiten detectar ARN específico (por ejemplo, de virus) convirtiéndolo primero en ADN complementario y amplificándolo para su análisis.</p>
+  </section>
+
+  <section>
+    <h2>Importancia y aplicaciones</h2>
+    <p>El ARN no es solo un intermediario entre el ADN y las proteínas, también regula procesos celulares claves (expresión génica), participa en el ensamblaje de ribosomas y sirve como herramienta en diagnóstico, biotecnología y medicina. Comprender el ARN ayuda a explicar cómo las células responden al ambiente, cómo se desarrollan ciertas enfermedades y cómo diseñar tratamientos modernos (por ejemplo, terapias basadas en ARNm o ARNi).</p>
+    <div class="imagen">
+    <img src="img/enfermedad.jpg" alt="Ilustración conceptual de vacunas basadas en ARNm" />
+  </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Proyecto escolar - Biología 9° Grado | Créditos: Imágenes libres de derechos</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clasificación y función de las vitaminas - Biología 9°</title>
+  <meta name="description" content="Clasificación de las vitaminas en liposolubles e hidrosolubles, con sus principales funciones y ejemplos para 9° grado." />
+  <style>
+    :root {
+      --verde-suave: #dee8ce;
+      --terracota: #bb6653;
+      --naranja: #f08b51;
+      --crema: #fff8e8;
+      --melocoton: #ffb38e;
+      --arena: #ffcf9d;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      margin: 0;
+      background: var(--crema);
+      line-height: 1.7;
+      color: #333;
+    }
+
+    nav.top {
+      background: var(--terracota);
+      padding: 12px;
+      text-align: center;
+    }
+    nav.top a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      border-bottom: 2px solid transparent;
+    }
+    nav.top a:hover { border-bottom: 2px solid var(--arena); }
+
+    header {
+      background: linear-gradient(135deg, var(--verde-suave), var(--terracota));
+      color: white;
+      text-align: center;
+      padding: 32px 12px 26px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    }
+    header h1 { margin: 0; font-size: 2.4rem; }
+    header p { margin: 8px 0 0; font-size: 1.05rem; opacity: .95; }
+
+    section {
+      background: #fff;
+      margin: 22px auto;
+      padding: 22px;
+      border-radius: 12px;
+      max-width: 920px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    h2 { color: var(--terracota); margin-top: 0; }
+    h3 { color: var(--naranja); margin-top: 1rem; }
+
+    .nota {
+      background: var(--verde-suave);
+      border-left: 6px solid var(--terracota);
+      padding: 12px 16px;
+      border-radius: 10px;
+      margin: 16px 0;
+    }
+
+    ul, ol { padding-left: 20px; }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .card h4 { margin: 0 0 6px; color: var(--naranja); }
+
+    table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+    th, td { border: 1px solid #e6e6e6; padding: 10px; text-align: left; }
+    th { background: var(--naranja); color: #fff; }
+    caption { text-align: left; font-weight: 600; padding: 6px 0; color: #555; }
+
+    .imagen { text-align: center; margin: 16px 0; }
+    img {
+      max-width: 360px;
+      border-radius: 10px;
+      border: 4px solid var(--melocoton);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform .3s ease;
+    }
+    img:hover { transform: scale(1.05); }
+
+    .chips {
+      display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;
+      margin-top: 12px;
+    }
+    .chip {
+      background: var(--arena);
+      color: #333;
+      padding: 8px 12px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      border: 2px solid transparent;
+    }
+    .chip:hover { border-color: var(--naranja); }
+
+    footer {
+      background: linear-gradient(135deg, var(--terracota), var(--naranja));
+      color: #fff;
+      text-align: center;
+      padding: 15px; margin-top: 40px; font-size: .9rem;
+    }
+
+    @media (max-width: 720px) {
+      .grid-2 { grid-template-columns: 1fr; }
+      img { max-width: 90%; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="top">
+    <a href="vitaminas.html">← Volver a Vitaminas</a>
+    &nbsp;|&nbsp;
+    <a href="index.html">Inicio</a>
+  </nav>
+
+  <header>
+    <h1>Clasificación y función de las vitaminas</h1>
+    <p>Cómo se agrupan y qué papel cumplen en tu cuerpo</p>
+
+    <div class="chips" aria-label="Índice de secciones">
+      <a class="chip" href="#clasificacion">Clasificación</a>
+      <a class="chip" href="#liposolubles">Vitaminas liposolubles</a>
+      <a class="chip" href="#hidrosolubles">Vitaminas hidrosolubles</a>
+      <a class="chip" href="#funciones">Funciones principales</a>
+      <a class="chip" href="#tabla">Resumen en tabla</a>
+    </div>
+  </header>
+
+  <section id="clasificacion">
+    <h2>Clasificación general</h2>
+    <p class="lead">Las vitaminas se agrupan según su <strong>solubilidad</strong>: en grasa (liposolubles) o en agua (hidrosolubles). Esta característica define cómo se absorben, almacenan y eliminan en el cuerpo.</p>
+    <div class="nota"><strong>Dato clave:</strong> las liposolubles se almacenan en el hígado y tejido graso, mientras que las hidrosolubles deben reponerse diariamente.</div>
+  </section>
+
+  <section id="liposolubles">
+    <h2>Vitaminas liposolubles</h2>
+    <div class="grid-2">
+      <div class="card">
+        <h4>Vitamina A</h4>
+        <p>Favorece la visión, la piel y la inmunidad.</p>
+      </div>
+      <div class="card">
+        <h4>Vitamina D</h4>
+        <p>Permite la absorción de calcio y fósforo, fortaleciendo huesos y dientes.</p>
+      </div>
+      <div class="card">
+        <h4>Vitamina E</h4>
+        <p>Funciona como antioxidante, protege membranas celulares.</p>
+      </div>
+      <div class="card">
+        <h4>Vitamina K</h4>
+        <p>Fundamental en la coagulación sanguínea y salud ósea.</p>
+      </div>
+    </div>
+    <div class="imagen">
+      <img src="img/cartoon.jpg" alt="Ejemplos de alimentos ricos en vitaminas liposolubles" />
+    </div>
+  </section>
+
+  <section id="hidrosolubles">
+    <h2>Vitaminas hidrosolubles</h2>
+    <p>Son solubles en agua, no se almacenan de forma significativa y se eliminan en la orina. Es necesario consumirlas de manera regular.</p>
+    <div class="grid-2">
+      <div class="card">
+        <h4>Vitamina C</h4>
+        <p>Repara tejidos, ayuda a absorber hierro y fortalece defensas.</p>
+      </div>
+      <div class="card">
+        <h4>Complejo B</h4>
+        <p>Conjunto de vitaminas que participan en el metabolismo de la energía y la formación de glóbulos rojos.</p>
+      </div>
+    </div>
+    <div class="imagen">
+      <img src="img/complejob.jpg" alt="Frutas y verduras ricas en vitamina C y complejo B" />
+    </div>
+  </section>
+
+  <section id="funciones">
+    <h2>Funciones principales</h2>
+    <ul>
+      <li><strong>Regulación:</strong> intervienen en reacciones químicas clave.</li>
+      <li><strong>Protección:</strong> antioxidantes que defienden células.</li>
+      <li><strong>Producción:</strong> ayudan a formar tejidos y defensas.</li>
+      <li><strong>Metabolismo:</strong> permiten transformar nutrientes en energía.</li>
+    </ul>
+  </section>
+
+  <section id="tabla">
+    <h2>Resumen visual</h2>
+    <table>
+      <caption>Clasificación y funciones de las principales vitaminas</caption>
+      <thead>
+        <tr>
+          <th>Grupo</th>
+          <th>Vitaminas</th>
+          <th>Funciones destacadas</th>
+          <th>Fuentes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Liposolubles</td>
+          <td>A, D, E, K</td>
+          <td>Visión, huesos, antioxidantes, coagulación</td>
+          <td>Zanahoria, hígado, lácteos, aceites, verduras verdes</td>
+        </tr>
+        <tr>
+          <td>Hidrosolubles</td>
+          <td>C, Complejo B</td>
+          <td>Tejidos, defensas, energía, sistema nervioso</td>
+          <td>Cítricos, granos, carnes, legumbres</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section style="text-align:center">
+    <a class="chip" href="que-son.html">← Volver a: ¿Qué son?</a>
+    <a class="chip" href="importancia.html">→ Ir a: Importancia en la salud</a>
+    <a class="chip" href="actividades.html">→ Ir a: Actividades</a>
+  </section>
+
+  <footer>
+    <p>Proyecto escolar - Biología 9° Grado | Créditos: Imágenes libres de derechos</p>
+  </footer>
+</body>
+</html>

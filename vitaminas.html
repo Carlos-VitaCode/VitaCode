@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vitaminas - Biología 9°</title>
+  <meta name="description" content="Vitaminas: qué son, clasificación, funciones, fuentes, deficiencias y suplementación para estudiantes de 9° grado.">
+  <style>
+    /* Paleta */
+    :root {
+      --verde-suave: #dee8ce;
+      --terracota: #bb6653;
+      --naranja: #f08b51;
+      --crema: #fff8e8;
+      --melocoton: #ffb38e;
+      --arena: #ffcf9d;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      margin: 0;
+      background: var(--crema);
+      line-height: 1.7;
+      color: #333;
+    }
+
+    /* Barra superior (índice) */
+    .top-index {
+      background: var(--terracota);
+      text-align: center;
+      padding: 12px;
+    }
+    .top-index a {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.1em;
+      border-bottom: 2px solid transparent;
+    }
+    .top-index a:hover { border-bottom: 2px solid var(--arena); }
+
+    /* Nombre de página */
+    header h1 {
+      text-align: center;
+      padding: 30px 10px;
+      margin: 0;
+      background: linear-gradient(135deg, var(--verde-suave), var(--terracota));
+      color: white;
+      font-size: 2.8em;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+
+    /* Subpáginas como cajas */
+    .subpages {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 30px auto;
+      max-width: 1000px;
+      padding: 0 15px;
+    }
+    .subpages a {
+      flex: 1 1 250px;
+      text-align: center;
+      padding: 25px 15px;
+      font-size: 1.3em;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .subpages a:nth-child(1) { background: var(--naranja); color: white; }
+    .subpages a:nth-child(2) { background: var(--arena); color: #333; }
+    .subpages a:nth-child(3) { background: var(--melocoton); color: #333; }
+    .subpages a:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+    }
+
+    /* Títulos de secciones */
+    h2 { color: var(--terracota); margin-top: 0; }
+    h3 { color: var(--naranja); margin-top: 1em; }
+
+    /* Secciones */
+    section {
+      background: white;
+      padding: 25px;
+      margin: 25px auto;
+      border-radius: 12px;
+      max-width: 900px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    /* Listas y tablas */
+    ul, ol { padding-left: 20px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    caption {
+      text-align: left;
+      padding: 6px 0;
+      font-weight: 600;
+      color: #555;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background: var(--naranja);
+      color: white;
+    }
+
+    /* Imágenes */
+    .imagen { text-align: center; margin: 20px 0; }
+    img {
+      max-width: 320px;
+      border-radius: 10px;
+      border: 4px solid var(--melocoton);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    img:hover { transform: scale(1.05); }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(135deg, var(--terracota), var(--naranja));
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 0.9em;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      img { max-width: 90%; }
+      .subpages { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Índice general -->
+  <div class="top-index">
+    <a href="index.html" aria-label="Volver al índice general">← Volver al índice general</a>
+  </div>
+
+  <!-- Nombre de página -->
+  <header>
+    <h1>Vitaminas</h1>
+  </header>
+
+  <!-- Subpáginas -->
+  <div class="subpages">
+    <a href="que-son.html">¿Qué son?</a>
+    <a href="clasificacion.html">Clasificación y función</a>
+    <a href="importancia.html">Importancia en la salud</a>
+  </div>
+
+  <!-- Qué son -->
+  <section id="que-son">
+    <h2>¿Qué son las vitaminas?</h2>
+    <p>Las vitaminas son compuestos orgánicos que el cuerpo humano necesita en pequeñas cantidades para mantener su salud, crecimiento y funcionamiento óptimo. Aunque no aportan energía, son vitales para procesos metabólicos, producción de enzimas, y como antioxidantes.</p>
+    <div class="imagen">
+      <img src="img/vitaminas.jpg" alt="Ilustración de cápsulas con vitaminas">
+    </div>
+  </section>
+
+  <!-- Clasificación -->
+  <section id="clasificacion">
+    <h2>Clasificación de las vitaminas</h2>
+    <p>Se dividen en dos grandes grupos según su solubilidad:</p>
+    <h3>Vitaminas liposolubles</h3>
+    <p>Se disuelven en grasas y aceites, pueden almacenarse en tejidos grasos y el hígado. Ejemplos: A, D, E, K.</p>
+    <div class="imagen">
+      <img src="img/aceites.jpg" alt="Aceites y frutos secos ricos en vitaminas liposolubles">
+    </div>
+    <h3>Vitaminas hidrosolubles</h3>
+    <p>Se disuelven en agua y generalmente no se almacenan, por lo que deben consumirse regularmente. Ejemplos: Complejo B (B1, B2, B3, B6, B12, ácido fólico) y vitamina C.</p>
+    <div class="imagen">
+      <img src="img/citricos.jpg" alt="Cítricos y verduras con vitaminas hidrosolubles">
+    </div>
+  </section>
+
+  <!-- Funciones -->
+  <section id="funciones">
+    <h2>Funciones y beneficios principales</h2>
+    <p>Cada vitamina tiene funciones específicas que contribuyen al bienestar general:</p>
+    <ul>
+      <li><strong>Vitamina A:</strong> Visión, crecimiento celular, inmunidad.</li>
+      <li><strong>Vitamina D:</strong> Absorción de calcio y fósforo.</li>
+      <li><strong>Vitamina E:</strong> Antioxidante protector celular.</li>
+      <li><strong>Vitamina K:</strong> Coagulación y salud ósea.</li>
+      <li><strong>Complejo B:</strong> Energía, glóbulos rojos, sistema nervioso.</li>
+      <li><strong>Vitamina C:</strong> Reparación tisular, absorción de hierro, defensas.</li>
+    </ul>
+    <div class="imagen">
+      <img src="img/beneficios.jpg" alt="Infografía de beneficios de distintas vitaminas">
+    </div>
+  </section>
+
+  <!-- Fuentes -->
+  <section id="fuentes">
+    <h2>Fuentes naturales de vitaminas</h2>
+    <p>Las vitaminas se obtienen principalmente a través de una dieta variada que incluya frutas, verduras, granos, productos animales y semillas.</p>
+
+    <table aria-describedby="desc-fuentes">
+      <caption id="desc-fuentes">Tabla de vitaminas con fuentes y funciones destacadas.</caption>
+      <thead>
+        <tr>
+          <th scope="col">Vitamina</th>
+          <th scope="col">Fuente principal</th>
+          <th scope="col">Función destacada</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>A</td><td>Zanahoria, espinaca, hígado</td><td>Visión y crecimiento</td></tr>
+        <tr><td>D</td><td>Pescado graso, yema de huevo, sol</td><td>Absorción de calcio</td></tr>
+        <tr><td>E</td><td>Frutos secos, aceites</td><td>Antioxidante</td></tr>
+        <tr><td>K</td><td>Verduras de hoja verde</td><td>Coagulación</td></tr>
+        <tr><td>C</td><td>Cítricos, fresas, pimientos</td><td>Tejidos e inmunidad</td></tr>
+        <tr><td>B</td><td>Carnes, granos, legumbres</td><td>Metabolismo energético</td></tr>
+      </tbody>
+    </table>
+    <div class="imagen">
+      <img src="img/frutas.jpg" alt="Frutas y verduras variadas como fuentes de vitaminas">
+    </div>
+  </section>
+
+  <!-- Deficiencias -->
+  <section id="deficiencias">
+    <h2>Deficiencias y enfermedades relacionadas</h2>
+    <h3>Vitamina A</h3>
+    <p>Ceguera nocturna, problemas en la piel.</p>
+    <h3>Vitamina D</h3>
+    <p>Raquitismo en niños, osteoporosis en adultos.</p>
+    <h3>Vitamina C</h3>
+    <p>Escorbuto, debilidad en encías y cicatrización deficiente.</p>
+    <h3>Vitamina B12</h3>
+    <p>Anemia perniciosa y problemas neurológicos.</p>
+    <div class="imagen">
+      <img src="img/deficiencia.jpg" alt="Síntomas comunes de deficiencias vitamínicas">
+    </div>
+  </section>
+
+  <!-- Suplementación -->
+  <section id="suplementacion">
+    <h2>Suplementación y cuidados</h2>
+    <p>En casos especiales (embarazo, dietas restrictivas, enfermedades), puede ser necesaria la suplementación recetada por profesionales.</p>
+    <p>⚠️ El exceso, sobre todo de vitaminas liposolubles, puede ser tóxico.</p>
+    <div class="imagen">
+      <img src="img/suplementos.jpg" alt="Pastillas y cápsulas de vitaminas">
+    </div>
+  </section>
+
+  <footer>
+    <p>Proyecto escolar - Biología 9° Grado | Créditos: Imágenes libres de derechos</p>
+  </footer>
+</body>
+</html>
